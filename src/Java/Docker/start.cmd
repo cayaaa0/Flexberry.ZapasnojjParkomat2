@@ -1,0 +1,1 @@
+docker-compose -p zapasnojj_parkomat2-java up -d

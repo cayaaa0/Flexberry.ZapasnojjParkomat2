@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-parkomat2-терминал-e",
+  "editForm": "i-i-s-zapasnojj-parkomat2-терминал-e",
+  "external": false,
+  "caption": "Терминал",
+  "name": "IISZapasnojj_parkomat2ТерминалL",
+  "className": "ТерминалL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-терминал",
+      "modelProjection": "ТерминалL"
+    }
+  ]
+}

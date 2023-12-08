@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISZapasnojj_parkomat2Терминал",
+  "modelName": "i-i-s-zapasnojj-parkomat2-терминал",
+  "className": "Терминал",
+  "nameSpace": "IIS.Zapasnojj_parkomat2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерТер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТерминалE",
+      "modelName": "i-i-s-zapasnojj-parkomat2-терминал",
+      "attrs": [
+        {
+          "name": "номерТер",
+          "caption": "Номер терминала",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ТерминалL",
+      "modelName": "i-i-s-zapasnojj-parkomat2-терминал",
+      "attrs": [
+        {
+          "name": "номерТер",
+          "caption": "Номер терминала",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

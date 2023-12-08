@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-parkomat2-автомобиль-e",
+  "editForm": "i-i-s-zapasnojj-parkomat2-автомобиль-e",
+  "external": false,
+  "caption": "Автомобиль",
+  "name": "IISZapasnojj_parkomat2АвтомобильL",
+  "className": "АвтомобильL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-автомобиль",
+      "modelProjection": "АвтомобильL"
+    }
+  ]
+}

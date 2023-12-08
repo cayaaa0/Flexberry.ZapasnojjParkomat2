@@ -1,0 +1,133 @@
+﻿{
+  "name": "IISZapasnojj_parkomat2Запись",
+  "modelName": "i-i-s-zapasnojj-parkomat2-запись",
+  "className": "Запись",
+  "nameSpace": "IIS.Zapasnojj_parkomat2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "стоимость",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "автомобиль",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-автомобиль",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "паркМесто",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-парк-место",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "услуга",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-услуга",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "паркомат",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-паркомат",
+      "inverse": "запись"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЗаписьE",
+      "modelName": "i-i-s-zapasnojj-parkomat2-запись",
+      "attrs": [
+        {
+          "name": "стоимость",
+          "caption": "Стоимость",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ГосНомер",
+          "lookupValueField": "госНомер",
+          "relationName": "Автомобиль",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "госНомер",
+              "caption": "Гос номер",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Автомобиль",
+          "name": "автомобиль",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-автомобиль",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "ПаркМесто",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Парковочное место",
+          "name": "паркМесто",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-парк-место",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Длительность",
+          "lookupValueField": "длительность",
+          "relationName": "Услуга",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "длительность",
+              "caption": "Длительность",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Услуга",
+          "name": "услуга",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-услуга",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

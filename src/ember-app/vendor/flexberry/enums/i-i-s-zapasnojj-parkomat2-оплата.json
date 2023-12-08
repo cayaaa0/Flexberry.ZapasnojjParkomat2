@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Zapasnojj_parkomat2",
+  "className": "Оплата",
+  "enumObjects": {
+    "1": "Оплачено",
+    "2": "Не оплачено"
+  }
+}

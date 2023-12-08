@@ -1,0 +1,225 @@
+﻿{
+  "name": "IISZapasnojj_parkomat2Паркомат",
+  "modelName": "i-i-s-zapasnojj-parkomat2-паркомат",
+  "className": "Паркомат",
+  "nameSpace": "IIS.Zapasnojj_parkomat2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяОкон",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "времяОплаты",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОкон",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОплаты",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерПарк",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статОпл",
+      "type": "i-i-s-zapasnojj-parkomat2-оплата",
+      "flexberryType": "Оплата",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "терминал",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-терминал",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "запись",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-запись",
+      "inverse": "паркомат"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПаркоматE",
+      "modelName": "i-i-s-zapasnojj-parkomat2-паркомат",
+      "attrs": [
+        {
+          "name": "номерПарк",
+          "caption": "Номер паркомата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяОплаты",
+          "caption": "Время оплаты",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОплаты",
+          "caption": "Дата оплаты",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "статОпл",
+          "caption": "Статус оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "времяОкон",
+          "caption": "Время окончания",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "датаОкон",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерТер",
+          "lookupValueField": "номерТер",
+          "relationName": "Терминал",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерТер",
+              "caption": "Номер термиинала",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Терминал",
+          "name": "терминал",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-терминал",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ЗаписьE",
+          "caption": "Запись",
+          "name": "запись",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-запись",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПаркоматL",
+      "modelName": "i-i-s-zapasnojj-parkomat2-паркомат",
+      "attrs": [
+        {
+          "name": "номерПарк",
+          "caption": "Номер паркомата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяОплаты",
+          "caption": "Время оплаты",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОплаты",
+          "caption": "Дата оплаты",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "статОпл",
+          "caption": "Статус оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "времяОкон",
+          "caption": "Время окончания",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "датаОкон",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Терминал",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерТер",
+              "caption": "Номер терминала",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер терминала",
+          "name": "терминал",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-терминал",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

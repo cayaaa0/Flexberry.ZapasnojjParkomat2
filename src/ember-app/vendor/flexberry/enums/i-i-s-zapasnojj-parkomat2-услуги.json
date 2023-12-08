@@ -1,0 +1,9 @@
+﻿{
+  "nameSpace": "IIS.Zapasnojj_parkomat2",
+  "className": "Услуги",
+  "enumObjects": {
+    "1": "Бесплатная",
+    "2": "Краткосрочная",
+    "3": "Долгосрочная"
+  }
+}

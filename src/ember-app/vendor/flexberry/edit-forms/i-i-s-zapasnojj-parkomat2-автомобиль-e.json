@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Водитель",
+      "projection": "ВодительL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Автомобиль",
+  "name": "IISZapasnojj_parkomat2АвтомобильE",
+  "className": "АвтомобильE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-автомобиль",
+      "modelProjection": "АвтомобильE"
+    }
+  ]
+}

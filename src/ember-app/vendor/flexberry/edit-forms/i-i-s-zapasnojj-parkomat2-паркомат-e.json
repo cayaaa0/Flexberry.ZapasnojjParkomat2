@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Терминал",
+      "projection": "ТерминалL",
+      "detailModelName": null
+    },
+    {
+      "master": "автомобиль",
+      "displayAttributeName": "госНомер",
+      "required": true,
+      "relationName": "Запись.Автомобиль",
+      "projection": "АвтомобильL",
+      "detailModelName": "i-i-s-zapasnojj-parkomat2-запись"
+    },
+    {
+      "master": "паркМесто",
+      "displayAttributeName": "номер",
+      "required": true,
+      "relationName": "Запись.ПаркМесто",
+      "projection": "ПаркМестоL",
+      "detailModelName": "i-i-s-zapasnojj-parkomat2-запись"
+    },
+    {
+      "master": "услуга",
+      "displayAttributeName": "длительность",
+      "required": true,
+      "relationName": "Запись.Услуга",
+      "projection": "УслугаL",
+      "detailModelName": "i-i-s-zapasnojj-parkomat2-запись"
+    }
+  ],
+  "external": false,
+  "caption": "Паркомат",
+  "name": "IISZapasnojj_parkomat2ПаркоматE",
+  "className": "ПаркоматE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-паркомат",
+      "modelProjection": "ПаркоматE"
+    }
+  ]
+}

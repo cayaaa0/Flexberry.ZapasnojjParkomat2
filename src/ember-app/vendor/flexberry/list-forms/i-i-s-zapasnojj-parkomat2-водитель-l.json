@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-parkomat2-водитель-e",
+  "editForm": "i-i-s-zapasnojj-parkomat2-водитель-e",
+  "external": false,
+  "caption": "Водитель",
+  "name": "IISZapasnojj_parkomat2ВодительL",
+  "className": "ВодительL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-водитель",
+      "modelProjection": "ВодительL"
+    }
+  ]
+}

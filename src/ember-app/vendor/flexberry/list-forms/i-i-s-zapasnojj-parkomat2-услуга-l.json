@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-parkomat2-услуга-e",
+  "editForm": "i-i-s-zapasnojj-parkomat2-услуга-e",
+  "external": false,
+  "caption": "Услуга",
+  "name": "IISZapasnojj_parkomat2УслугаL",
+  "className": "УслугаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-услуга",
+      "modelProjection": "УслугаL"
+    }
+  ]
+}

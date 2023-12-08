@@ -1,0 +1,121 @@
+<h3 class="ui header">{{t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерПарк
+      class=(if (v-get validationModel "номерПарк" "isInvalid") "error")
+      label=(t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.номерПарк-caption")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-номерПарк=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерПарк" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.времяОплаты
+      class=(if (v-get validationModel "времяОплаты" "isInvalid") "error")
+      label=(t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.времяОплаты-caption")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-времяОплаты=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "времяОплаты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.датаОплаты-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОплаты
+      class=(if (v-get validationModel "датаОплаты" "isInvalid") "error")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-датаОплаты=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОплаты" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-статОпл="true">
+    <label>{{t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.статОпл-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-zapasnojj-parkomat2-оплата")
+      value=model.статОпл
+      class=(if (v-get validationModel "статОпл" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статОпл" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.времяОкон
+      class=(if (v-get validationModel "времяОкон" "isInvalid") "error")
+      label=(t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.времяОкон-caption")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-времяОкон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "времяОкон" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.датаОкон-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОкон
+      class=(if (v-get validationModel "датаОкон" "isInvalid") "error")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-датаОкон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОкон" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.терминал-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.терминал
+      displayAttributeName="номерТер"
+      autocomplete=true
+      relationName="терминал"
+      projection="ТерминалL"
+      title=(t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.терминал-caption")
+      readonly=readonly
+      componentName="терминалLookup"
+      class=(if (v-get validationModel "терминал" "isInvalid") "error")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-терминал=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "терминал" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-zapasnojj-parkomat2-паркомат-e.запись-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="записьGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.запись
+      content=model.запись
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "запись" "isInvalid") "error")
+      data-test-i-i-s-zapasnojj-parkomat2-паркомат-e-запись=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "запись" "message")}}
+  </div>
+</form>

@@ -1,0 +1,73 @@
+﻿{
+  "applicationCaption": "Zapasnojj_parkomat2",
+  "applicationTitle": "Zapasnojj_parkomat2",
+  "items": [
+    {
+      "link": null,
+      "menuName": "услуги",
+      "caption": "Услуги",
+      "title": "Услуги",
+      "children": [
+        {
+          "link": "i-i-s-zapasnojj-parkomat2-услуга-l",
+          "menuName": null,
+          "caption": "Услуга",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "паркомат",
+      "caption": "Паркомат",
+      "title": "Паркомат",
+      "children": [
+        {
+          "link": "i-i-s-zapasnojj-parkomat2-терминал-l",
+          "menuName": null,
+          "caption": "Терминал",
+          "title": "Терминал",
+          "children": null
+        },
+        {
+          "link": "i-i-s-zapasnojj-parkomat2-парк-место-l",
+          "menuName": null,
+          "caption": "Парковочное место",
+          "title": "Парк место",
+          "children": null
+        },
+        {
+          "link": "i-i-s-zapasnojj-parkomat2-паркомат-l",
+          "menuName": null,
+          "caption": "Паркомат",
+          "title": "Паркомат",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "водитель",
+      "caption": "Водитель",
+      "title": "Водитель",
+      "children": [
+        {
+          "link": "i-i-s-zapasnojj-parkomat2-водитель-l",
+          "menuName": null,
+          "caption": "Водитель",
+          "title": "Водитель",
+          "children": null
+        },
+        {
+          "link": "i-i-s-zapasnojj-parkomat2-автомобиль-l",
+          "menuName": null,
+          "caption": "Автомобиль",
+          "title": "Автомобиль",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,106 @@
+﻿{
+  "name": "IISZapasnojj_parkomat2Автомобиль",
+  "modelName": "i-i-s-zapasnojj-parkomat2-автомобиль",
+  "className": "Автомобиль",
+  "nameSpace": "IIS.Zapasnojj_parkomat2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "госНомер",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "водитель",
+      "relatedTo": "i-i-s-zapasnojj-parkomat2-водитель",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "АвтомобильE",
+      "modelName": "i-i-s-zapasnojj-parkomat2-автомобиль",
+      "attrs": [
+        {
+          "name": "госНомер",
+          "caption": "Гос номер",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Водитель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Водитель",
+          "name": "водитель",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-водитель",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "АвтомобильL",
+      "modelName": "i-i-s-zapasnojj-parkomat2-автомобиль",
+      "attrs": [
+        {
+          "name": "госНомер",
+          "caption": "Гос номер",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Водитель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "водитель",
+          "relatedTo": "i-i-s-zapasnojj-parkomat2-водитель",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

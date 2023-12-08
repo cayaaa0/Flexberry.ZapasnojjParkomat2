@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-parkomat2-парк-место-e",
+  "editForm": "i-i-s-zapasnojj-parkomat2-парк-место-e",
+  "external": false,
+  "caption": "Парк место",
+  "name": "IISZapasnojj_parkomat2ПаркМестоL",
+  "className": "ПаркМестоL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-парк-место",
+      "modelProjection": "ПаркМестоL"
+    }
+  ]
+}

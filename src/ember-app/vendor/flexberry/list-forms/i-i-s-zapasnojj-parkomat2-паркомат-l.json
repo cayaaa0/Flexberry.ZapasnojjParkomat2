@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-parkomat2-паркомат-e",
+  "editForm": "i-i-s-zapasnojj-parkomat2-паркомат-e",
+  "external": false,
+  "caption": "Паркомат",
+  "name": "IISZapasnojj_parkomat2ПаркоматL",
+  "className": "ПаркоматL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-parkomat2-паркомат",
+      "modelProjection": "ПаркоматL"
+    }
+  ]
+}
